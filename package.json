@@ -1,0 +1,17 @@
+{
+  "name": "gridsome-headphones-site",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "format": "prettier --ignore-path .gitignore --write ."
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "gridsome-plugin-tailwindcss": "^3.0.1",
+    "prettier": "^2.1.2"
+  }
+}

@@ -1,0 +1,55 @@
+<template>
+  <div class="container mx-auto">
+    <header class="flex justify-between py-8">
+      <strong>
+        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+      </strong>
+      <nav class="">
+        <g-link class="mr-4 text-green-700 font-semibold hover:underline hover:text-green-500 active:text-green-400" to="/"
+          >Home</g-link
+        >
+        <g-link class="mr-4 text-green-700 font-semibold hover:underline hover:text-green-500 active:text-green-400" to="/about/">About</g-link>
+      </nav>
+    </header>
+    <slot />
+  </div>
+</template>
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  margin:0;
+  padding:0;
+  line-height: 1.5;
+}
+
+.layout {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+.nav__link {
+  margin-left: 20px;
+} */
+</style>
