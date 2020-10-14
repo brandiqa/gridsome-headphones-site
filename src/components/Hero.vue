@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8" v-editable="blok">
+  <div class="py-8" v-editable="blok">
     <h1 class="text-4xl font-semibold">{{ blok.headline }}</h1>
   </div>
 </template>
