@@ -1,8 +1,10 @@
 <template>
   <div class="container mx-auto">
-    <header class="flex justify-between my-4">
+    <header class="flex items-center my-4 space-x-8">
       <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+        <g-link class="text-3xl text-green-800" to="/">{{
+          $static.metadata.siteName
+        }}</g-link>
       </strong>
       <nav class="">
         <g-link

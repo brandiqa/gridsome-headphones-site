@@ -15,15 +15,15 @@
             edge.node.content.image | resize('fit-in/300x300/filters:fill(fff)')
           "
         />
-        <div class="px-8">
+        <div class="flex justify-between px-8">
           <g-link
             class="block text-lg font-bold hover:underline hover:text-gray-700"
             :to="edge.node.full_slug"
           >
             {{ edge.node.content.brand }} {{ edge.node.content.model }}
           </g-link>
-          <span class="font-semibold text-md"
-            >$ {{ edge.node.content.price }}</span
+          <span class="text-lg font-semibold text-green-700"
+            >${{ edge.node.content.price }}</span
           >
         </div>
         <div
