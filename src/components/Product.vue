@@ -1,5 +1,6 @@
 <template>
   <div v-editable="blok">
+    <Breadcrumb :page="blok.brand + ' ' + blok.model" />
     <div class="flex justify-between p-4 mt-8 bg-white">
       <div>
         <img class="p-4" v-bind:src="blok.image | resize('fit-in/400x400')" />
@@ -18,7 +19,7 @@
             <li>Impedance: {{ blok.impedance }} Ohms</li>
           </ul>
           <button
-            class="inline-flex items-center p-24 py-4 mt-16 text-center text-gray-200 bg-gray-800"
+            class="inline-flex items-center p-24 py-4 mt-16 text-center text-gray-200 bg-gray-800 hover:bg-gray-900 hover:text-white"
           >
             <svg
               class="w-6 h-6"
@@ -43,7 +44,12 @@
 </template>
 
 <script>
+import Breadcrumb from './Breadcrumb'
+
 export default {
   props: ['blok'],
+  components: {
+    Breadcrumb,
+  },
 }
 </script>
