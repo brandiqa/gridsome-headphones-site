@@ -1,7 +1,9 @@
 <template>
   <div v-editable="blok">
     <Breadcrumb :page="blok.brand + ' ' + blok.model" />
-    <div class="flex justify-between p-4 mt-8 bg-white">
+    <div
+      class="flex flex-col justify-center p-4 mt-8 space-x-16 bg-white md:flex-row place-items-center container-mx-auto"
+    >
       <div>
         <img class="p-4" v-bind:src="blok.image | resize('fit-in/400x400')" />
       </div>
@@ -13,7 +15,9 @@
         <div class="mt-16">
           <h4 class="text-lg font-semibold text-gray-800">SPECS</h4>
           <ul class="pl-8 mt-2 text-gray-700 list-disc">
-            <li>Transducer Type: {{ blok.driverType | driverType }}</li>
+            <li class="capitalize">
+              Transducer Type: {{ blok.driver | driverType }}
+            </li>
             <li>Operating Principle: {{ blok.backType | backType }}</li>
             <li class="capitalize">Pad Type: {{ blok.padType }}</li>
             <li>Impedance: {{ blok.impedance }} Ohms</li>

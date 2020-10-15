@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <p class="mb-4 text-sm font-semibold text-gray-700">
+  <div class="container mx-auto mt-8">
+    <p class="text-sm font-semibold text-gray-600">
       {{ $static.products.totalCount }} headphones available
     </p>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap mt-8 space-x-4">
       <div
-        class="mb-4 mr-4 overflow-hidden bg-white rounded shadow-lg"
+        class="mb-4 overflow-hidden bg-white rounded shadow-lg"
         v-for="edge in $static.products.edges"
         :key="edge.node.id"
       >
@@ -40,7 +40,7 @@
 
 <static-query>
   query {
-    products: allStoryblokEntry(filter: {full_slug: {regex:"products" }}) {
+    products: allStoryblokEntry(sortBy: "created_at", filter: {full_slug: {regex:"products" }}) {
       totalCount
       edges{
         node {

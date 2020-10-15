@@ -1,14 +1,14 @@
 <template>
-  <div class="container mx-auto">
-    <header class="flex items-center my-4 space-x-8">
+  <div>
+    <header class="container flex items-end mx-auto my-4 space-x-8">
       <strong>
         <g-link class="text-3xl text-green-800" to="/">{{
           $static.metadata.siteName
         }}</g-link>
       </strong>
-      <nav class="">
+      <nav>
         <g-link
-          class="mr-4 font-semibold text-green-700 hover:underline hover:text-green-500 active:text-green-400"
+          class="mr-4 font-semibold text-green-700 hover:underline hover:text-green-900 active:text-green-400"
           to="/"
           >Home</g-link
         >
