@@ -9,7 +9,7 @@
         v-for="edge in $static.products.edges"
         :key="edge.node.id"
       >
-        <g-image
+        <img
           class="p-8"
           v-bind:src="
             edge.node.content.image | resize('fit-in/300x300/filters:fill(fff)')
@@ -52,35 +52,3 @@
     }
   }
 </static-query>
-
-<script>
-export default {
-  filters: {
-    resize: (image, option) => {
-      var imageService = '//img2.storyblok.com/'
-      var path = image.replace('//a.storyblok.com', '')
-      return imageService + option + path
-    },
-    driverType: (value) => {
-      switch (value) {
-        case 'D':
-          return 'dynamic'
-        default:
-          return 'Unknown'
-      }
-    },
-    backType: (value) => {
-      switch (value) {
-        case 'open':
-          return 'open back'
-        case 'semi':
-          return 'semi open'
-        case 'closed':
-          return 'closed back'
-        default:
-          return 'Unknown'
-      }
-    },
-  },
-}
-</script>
