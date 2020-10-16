@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center justify-between p-4 bg-gray-300">
-    <div class="inline-flex items-center space-x-4">
+  <div class="flex items-center justify-between px-2 py-4 bg-gray-300 md:px-4">
+    <div class="inline-flex items-center space-x-2">
       <label class="font-semibold text-gray-700 text-md" for="sort-input"
         >Sort By</label
       >
@@ -17,7 +17,7 @@
       </select>
     </div>
     <span class="text-sm font-semibold text-gray-600">
-      {{ totalCount }} headphones available
+      {{ totalCount }} headphones
     </span>
   </div>
 </template>
