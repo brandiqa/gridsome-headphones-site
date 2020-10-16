@@ -6,13 +6,19 @@
       <span>Copyright @ 2020</span>
       <span>
         Powered by
-        <a href="https://gridsome.org/" target="_blank">Gridsome</a> and
-        <a href="https://www.storyblok.com/" target="_blank">StoryBlok</a>
+        <a href="https://gridsome.org/" target="_blank" rel="noreferrer"
+          >Gridsome</a
+        >
+        and
+        <a href="https://www.storyblok.com/" target="_blank" rel="noreferrer"
+          >StoryBlok</a
+        >
       </span>
 
       <a
         href="https://github.com/brandiqa/gridsome-headphones-site"
         target="_blank"
+        rel="noreferrer"
       >
         <v-icon name="brands/github" /> GitHub
       </a>
