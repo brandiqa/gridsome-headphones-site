@@ -26,8 +26,8 @@ export default {
           to: '/',
         },
         {
-          label: 'Products',
-          to: '/products',
+          label: 'About',
+          to: '/about',
         },
         {
           label: 'Contact',
