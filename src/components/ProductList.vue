@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-8">
+  <div class="container mx-auto mt-2">
     <div class="flex items-center justify-between p-4 bg-gray-300">
       <div class="inline-flex items-center space-x-4">
         <label class="font-semibold text-gray-700 text-md" for="sort-input"
@@ -21,7 +21,7 @@
         {{ $static.products.totalCount }} headphones available
       </span>
     </div>
-    <div class="flex flex-wrap mt-8">
+    <div class="flex flex-wrap mt-2">
       <div v-for="product in sortedProducts" :key="product.id">
         <ProductCard :product="product" />
       </div>

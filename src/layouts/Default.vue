@@ -1,8 +1,8 @@
 <template>
   <div>
-    <header class="container flex items-end mx-auto my-4 space-x-8">
+    <header class="container flex items-end mx-auto my-2 space-x-8">
       <strong>
-        <g-link class="text-3xl text-green-800" to="/">{{
+        <g-link class="text-xl text-green-800" to="/">{{
           $static.metadata.siteName
         }}</g-link>
       </strong>

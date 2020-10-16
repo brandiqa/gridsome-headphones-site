@@ -1,10 +1,10 @@
 <template>
   <div class="mb-4 mr-4 overflow-hidden bg-white rounded shadow-lg">
     <img
-      class="p-8"
+      class="px-8 py-4"
       v-bind:src="product.image | resize('fit-in/300x300/filters:fill(fff)')"
     />
-    <div class="flex justify-between px-8">
+    <div class="flex justify-between px-4">
       <g-link
         class="block text-lg font-bold hover:underline hover:text-gray-700"
         :to="product.full_slug"
