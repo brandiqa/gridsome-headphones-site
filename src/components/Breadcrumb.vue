@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 text-sm text-gray-500 bg-gray-800">
+  <div class="px-4 py-6 text-sm text-gray-500 bg-gray-800">
     <div class="container mx-auto">
       <ul class="flex items-end space-x-2 font-semibold">
         <li>
