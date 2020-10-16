@@ -16,6 +16,10 @@ You'll need at least the most recent version of Node.js LTS to run this applicat
 
 Do note many of the features have not yet been implemented. These features will soon be added:
 
+- Make navigation menu editable in Storyblok
+- Make Navigation menu responsive
+- Add Web hooks
+- Create 404 page
 - SEO meta tags (will need to add short description to products)
 - Contact Form integration
 - Google Analytics and Mixpanel integration

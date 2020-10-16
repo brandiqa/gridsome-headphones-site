@@ -2,10 +2,11 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import 'vue-awesome/icons/'
-import Icon from 'vue-awesome/components/Icon' // todo: replace with https://www.npmjs.com/package/@fortawesome/vue-fontawesome
+import Icon from 'vue-awesome/components/Icon' // todo: replace with the more popular https://www.npmjs.com/package/@fortawesome/vue-fontawesome
 
 import DefaultLayout from '~/layouts/Default.vue'
 import Page from '~/components/Page.vue'
+import PageContent from '~/components/PageContent.vue'
 import Hero from '~/components/Hero.vue'
 import Product from '~/components/Product.vue'
 import ProductList from '~/components/ProductList.vue'
@@ -19,6 +20,7 @@ export default function (Vue, { router, head, isClient }) {
 
   // register components
   Vue.component('Page', Page)
+  Vue.component('PageContent', PageContent)
   Vue.component('Hero', Hero)
   Vue.component('ProductList', ProductList)
   Vue.component('Product', Product)
