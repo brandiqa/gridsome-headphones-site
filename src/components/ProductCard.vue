@@ -1,34 +1,32 @@
 <template>
-  <div class="mb-4 overflow-hidden bg-white rounded shadow-lg">
+  <div class="mb-4 mr-4 overflow-hidden bg-white rounded shadow-lg">
     <img
       class="p-8"
-      v-bind:src="
-        edge.node.content.image | resize('fit-in/300x300/filters:fill(fff)')
-      "
+      v-bind:src="product.image | resize('fit-in/300x300/filters:fill(fff)')"
     />
     <div class="flex justify-between px-8">
       <g-link
         class="block text-lg font-bold hover:underline hover:text-gray-700"
-        :to="edge.node.full_slug"
+        :to="product.full_slug"
       >
-        {{ edge.node.content.brand }} {{ edge.node.content.model }}
+        {{ product.brand }} {{ product.model }}
       </g-link>
       <span class="text-lg font-semibold text-green-700"
-        >${{ edge.node.content.price }}</span
+        >${{ product.price }}</span
       >
     </div>
     <div
       class="flex justify-between p-4 mt-3 text-sm text-gray-600 border-t-2 border-gray-400"
     >
-      <span>{{ edge.node.content.driver | driverType }}</span>
-      <span>{{ edge.node.content.backType | backType }}</span>
-      <span>{{ edge.node.content.impedance }} Ohms</span>
+      <span>{{ product.driver | driverType }}</span>
+      <span>{{ product.backType | backType }}</span>
+      <span>{{ product.impedance }} Ohms</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['edge'],
+  props: ['product'],
 }
 </script>
