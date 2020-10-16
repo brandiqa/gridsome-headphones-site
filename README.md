@@ -16,6 +16,7 @@ You'll need at least the most recent version of Node.js LTS to run this applicat
 
 Do note many of the features have not yet been implemented. These features will soon be added:
 
+- Fix live editing
 - Make navigation menu editable in Storyblok
 - Make Navigation menu responsive
 - Make footer content editable in Storyblok

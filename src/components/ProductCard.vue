@@ -1,10 +1,12 @@
 <template>
   <div class="mb-4 overflow-hidden bg-white rounded shadow-lg">
-    <img
-      class="px-8 py-4"
-      v-bind:src="product.image | resize('fit-in/240x300/filters:fill(fff)')"
-      :alt="product.name"
-    />
+    <div class="px-8 py-4">
+      <img
+        class="w-full"
+        v-bind:src="product.image | resize('fit-in/240x300/filters:fill(fff)')"
+        :alt="product.name"
+      />
+    </div>
     <div class="flex justify-between px-2">
       <g-link
         class="block text-lg font-bold tracking-tight hover:underline hover:text-gray-700"

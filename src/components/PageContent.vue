@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto" v-editable="blok">
-    <div v-html="richtext"></div>
+  <div class="container mx-auto mt-4" v-editable="blok">
+    <div class="prose lg:prose-xl" v-html="richtext"></div>
   </div>
 </template>
 
