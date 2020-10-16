@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-4 mr-4 overflow-hidden bg-white rounded shadow-lg">
+  <div class="mb-4 overflow-hidden bg-white rounded shadow-lg">
     <img
       class="px-8 py-4"
       v-bind:src="product.image | resize('fit-in/300x300/filters:fill(fff)')"

@@ -1,27 +1,12 @@
 <template>
   <div class="container mx-auto mt-2">
-    <div class="flex items-center justify-between p-4 bg-gray-300">
-      <div class="inline-flex items-center space-x-4">
-        <label class="font-semibold text-gray-700 text-md" for="sort-input"
-          >Sort By</label
-        >
-        <select
-          class="px-2 py-2 text-sm leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
-          id="sort-input"
-          v-model="sortBy"
-        >
-          <option value="default">Default</option>
-          <option value="name-asc">Name (A-Z)</option>
-          <option value="name-desc">Name (Z-A)</option>
-          <option value="price-lo">Price (Low to High)</option>
-          <option value="price-hi">Price (High to Low)</option>
-        </select>
-      </div>
-      <span class="text-sm font-semibold text-gray-600">
-        {{ $static.products.totalCount }} headphones available
-      </span>
-    </div>
-    <div class="flex flex-wrap mt-2">
+    <SortPanel
+      class="mx-4"
+      :totalCount="$static.products.totalCount"
+      :sortBy="sortBy"
+      @update:sortBy="setSortBy"
+    />
+    <div class="flex flex-wrap justify-center px-4 mt-4 md:justify-between">
       <div v-for="product in sortedProducts" :key="product.id">
         <ProductCard :product="product" />
       </div>
@@ -48,16 +33,23 @@
 
 <script>
 import ProductCard from './ProductCard'
+import SortPanel from './SortPanel'
 
 export default {
   components: {
     ProductCard,
+    SortPanel,
   },
   data() {
     return {
       products: null,
       sortBy: 'default',
     }
+  },
+  methods: {
+    setSortBy(value) {
+      this.sortBy = value
+    },
   },
   created() {
     // Extract content & edge data into products
