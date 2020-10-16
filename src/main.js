@@ -28,6 +28,14 @@ export default function (Vue, { router, head, isClient }) {
     switch (value) {
       case 'D':
         return 'dynamic'
+      case 'BA':
+        return 'balanced armature'
+      case 'PM':
+        return 'planar magnetic'
+      case 'E':
+        return 'electrostatic'
+      case 'BC':
+        return 'bone conduction'
       default:
         return 'Unknown'
     }
