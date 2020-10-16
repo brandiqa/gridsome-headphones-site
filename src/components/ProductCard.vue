@@ -2,8 +2,9 @@
   <div class="mb-4 overflow-hidden bg-white rounded shadow-lg">
     <div class="px-8 py-4">
       <img
-        class="w-full"
         v-bind:src="product.image | resize('fit-in/240x300/filters:fill(fff)')"
+        width="240"
+        height="300"
         :alt="product.name"
       />
     </div>
