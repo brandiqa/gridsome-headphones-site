@@ -2,11 +2,12 @@
   <div class="mb-4 overflow-hidden bg-white rounded shadow-lg">
     <img
       class="px-8 py-4"
-      v-bind:src="product.image | resize('fit-in/300x300/filters:fill(fff)')"
+      v-bind:src="product.image | resize('fit-in/240x300/filters:fill(fff)')"
+      :alt="product.name"
     />
-    <div class="flex justify-between px-4">
+    <div class="flex justify-between px-2">
       <g-link
-        class="block text-lg font-bold hover:underline hover:text-gray-700"
+        class="block text-lg font-bold tracking-tight hover:underline hover:text-gray-700"
         :to="product.full_slug"
       >
         {{ product.brand }} {{ product.model }}
@@ -16,7 +17,7 @@
       >
     </div>
     <div
-      class="flex justify-between p-4 mt-3 text-sm text-gray-600 border-t-2 border-gray-400"
+      class="flex justify-between px-2 py-4 mt-3 text-sm text-gray-700 border-t-2 border-gray-400"
     >
       <span>{{ product.driver | driverType }}</span>
       <span>{{ product.backType | backType }}</span>

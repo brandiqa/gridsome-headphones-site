@@ -3,7 +3,7 @@
     <g-link
       v-for="route in routes"
       :key="route.label"
-      class="text-green-800 font-mendium hover:underline hover:text-green-500 active:text-green-400"
+      class="text-green-900 font-mendium hover:underline hover:text-green-500 active:text-green-400"
       :to="route.to"
       >{{ route.label }}
     </g-link>
@@ -12,7 +12,7 @@
 
 <style>
 nav .active--exact {
-  @apply text-green-600 font-semibold underline;
+  @apply text-green-800 font-semibold;
 }
 </style>
 

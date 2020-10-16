@@ -16,7 +16,7 @@
         <option value="price-hi">Price (High to Low)</option>
       </select>
     </div>
-    <span class="text-sm font-semibold text-gray-600">
+    <span class="text-sm font-semibold text-gray-700">
       {{ totalCount }} headphones
     </span>
   </div>
