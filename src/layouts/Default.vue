@@ -1,22 +1,17 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen overflow-x-hidden">
     <header class="container flex items-end justify-between px-4 mx-auto my-2">
       <strong>
         <g-link class="text-xl text-green-800" to="/">{{
           $static.metadata.siteName
         }}</g-link>
       </strong>
-      <nav class="space-x-2">
-        <g-link
-          v-for="route in routes"
-          :key="route.label"
-          class="text-green-800 font-mendium hover:underline hover:text-green-500 active:text-green-400"
-          :to="route.to"
-          >{{ route.label }}
-        </g-link>
-      </nav>
+      <Navbar />
     </header>
-    <slot />
+    <div class="flex-1">
+      <slot />
+    </div>
+    <Footer />
   </div>
 </template>
 
@@ -34,30 +29,20 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-nav .active--exact {
-  @apply text-green-600 font-semibold underline;
+
+.fa-icon {
+  @apply mr-2;
 }
 </style>
 
 <script>
+import Navbar from './Navbar'
+import Footer from './Footer'
+
 export default {
-  data() {
-    return {
-      routes: [
-        {
-          label: 'Home',
-          to: '/',
-        },
-        {
-          label: 'Products',
-          to: '/products',
-        },
-        {
-          label: 'Contact',
-          to: '/contact',
-        },
-      ],
-    }
+  components: {
+    Navbar,
+    Footer,
   },
 }
 </script>
