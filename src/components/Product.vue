@@ -2,7 +2,7 @@
   <div v-editable="blok">
     <Breadcrumb :page="blok.brand + ' ' + blok.model" />
     <div
-      class="flex flex-col justify-center p-4 mt-8 space-x-16 bg-white md:flex-row place-items-center container-mx-auto"
+      class="flex flex-col justify-center p-4 mt-4 bg-white md:space-x-16 md:flex-row place-items-center container-mx-auto"
     >
       <div>
         <img class="p-4" v-bind:src="blok.image | resize('fit-in/400x400')" />
@@ -12,7 +12,7 @@
           {{ blok.brand }} {{ blok.model }}
         </h2>
         <h3 class="text-xl font-semibold text-gray-700">$ {{ blok.price }}</h3>
-        <div class="mt-16">
+        <div class="mt-4 md:mt-16">
           <h4 class="text-lg font-semibold text-gray-800">SPECS</h4>
           <ul class="pl-8 mt-2 text-gray-700 list-disc">
             <li class="capitalize">
@@ -23,7 +23,7 @@
             <li>Impedance: {{ blok.impedance }} Ohms</li>
           </ul>
           <button
-            class="inline-flex items-center p-24 py-4 mt-16 text-center text-gray-200 bg-gray-800 hover:bg-gray-900 hover:text-white"
+            class="inline-flex items-center p-24 py-4 mt-8 text-center text-gray-200 bg-gray-800 md:mt-16 hover:bg-gray-900 hover:text-white"
           >
             <svg
               class="w-6 h-6"
