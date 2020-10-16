@@ -1,6 +1,8 @@
 <template>
   <footer class="py-8 text-sm text-center text-gray-400 bg-gray-800">
-    <div class="container flex justify-between mx-auto">
+    <div
+      class="container flex flex-col justify-between px-8 mx-auto space-y-4 md:flex-row md:space-y-0"
+    >
       <span>Copyright @ 2020</span>
       <span>
         Powered by

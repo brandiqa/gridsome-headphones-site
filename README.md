@@ -18,6 +18,7 @@ Do note many of the features have not yet been implemented. These features will 
 
 - Make navigation menu editable in Storyblok
 - Make Navigation menu responsive
+- Make footer content editable in Storyblok
 - Add Web hooks
 - Create 404 page
 - SEO meta tags (will need to add short description to products)
