@@ -1,17 +1,19 @@
 <template>
   <div>
-    <header class="container flex items-end mx-auto my-2 space-x-8">
+    <header class="container flex items-end justify-between px-4 mx-auto my-2">
       <strong>
         <g-link class="text-xl text-green-800" to="/">{{
           $static.metadata.siteName
         }}</g-link>
       </strong>
-      <nav>
+      <nav class="space-x-2">
         <g-link
-          class="mr-4 font-semibold text-green-700 hover:underline hover:text-green-900 active:text-green-400"
-          to="/"
-          >Home</g-link
-        >
+          v-for="route in routes"
+          :key="route.label"
+          class="text-green-800 font-mendium hover:underline hover:text-green-500 active:text-green-400"
+          :to="route.to"
+          >{{ route.label }}
+        </g-link>
       </nav>
     </header>
     <slot />
@@ -32,4 +34,30 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+nav .active--exact {
+  @apply text-green-600 font-semibold underline;
+}
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      routes: [
+        {
+          label: 'Home',
+          to: '/',
+        },
+        {
+          label: 'Products',
+          to: '/products',
+        },
+        {
+          label: 'Contact',
+          to: '/contact',
+        },
+      ],
+    }
+  },
+}
+</script>
