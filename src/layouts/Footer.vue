@@ -5,13 +5,17 @@
     >
       <span>Copyright @ 2020</span>
       <span>
-        Powered by
+        Powered by:
         <a href="https://gridsome.org/" target="_blank" rel="noreferrer"
           >Gridsome</a
         >
-        and
+        ,
         <a href="https://www.storyblok.com/" target="_blank" rel="noreferrer"
           >StoryBlok</a
+        >
+        &amp;
+        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"
+          >TailwindCSS</a
         >
       </span>
 
