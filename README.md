@@ -4,11 +4,26 @@ This is an example E-Commerce JAMStack static website showcasing performance bui
 
 The live version of this project can be found [here](https://gridsome-headphones.netlify.app/). Clone or Fork-Clone the project to your hard-drive then execute the following instructions in order.
 
-## 1. Storyblok Account Setup
+## Run Local Build
+
+This project accesses data from SitePoint's StoryBlok account. A public read-only API key is configured at `gridsome.config.js`. Run the following commands to get the demo up and running quickly.
+
+```bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:8000
+$ npm run develop # or yarn dev
+```
+
+If you would like to manipulate data, you will need a Storyblok account. Simply go through the following instructions, Step 1 - 3:
+
+## 1. Using your own StoryBlok Account
 
 1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free.
 2. Create a new Space and copy the preview token from Dashboard > Settings > API Keys pages
 3. Create an `.env` file and save the token key-value as : `STORYBLOK_API=<token>`
+4. In `gridsome.config.js`, look for and replace the value for `accessToken` to `process.env.STORYBLOK_API,` within the `gridsome-source-storyblok` plugin configuration section.
 
 For detailed explanation on how things work, checkout the [Gatsby docs](https://www.gatsbyjs.com/) and for the whole Setup you can have a look at [our step by step guide for Gatsby and Storyblok](**https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial**)
 
@@ -35,15 +50,17 @@ storyblok push-components ./seed.components.json --space 12345
 
 After the import you will have all the components under `Components` in your left sidebar.
 
-## Build Setup
+## 3. Create Content
 
-```bash
-# install dependencies
-$ npm install # Or yarn install
+Feel free to create content any way you like. Unfortunately, the navbar menu links are hard-coded. Here's a quick guide you can follow:
 
-# serve with hot reload at localhost:8000
-$ npm run develop # or yarn dev
-```
+1. Home Page(`/home` or `/`): delete all existing components. Add `PageTitle` and `ProductList` components. Fill in the fields accordingly
+2. Create Products(`/products`) folder with type Product
+3. Inside the Product folder, create multiple products. Make sure to fill in all the fields
+4. Create About (`/about`) page. Add `PageTitle` and `PageContent` components.
+5. Create Contact(`/contact`) page. Add `PageTitle` and `ContactForm`.
+
+Make sure to hit publish otherwise the content won't be visible on production builds.
 
 ## License
 

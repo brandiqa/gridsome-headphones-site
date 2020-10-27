@@ -20,8 +20,9 @@ module.exports = {
       use: 'gridsome-source-storyblok',
       options: {
         client: {
-          accessToken: process.env.STORYBLOK_API,
+          accessToken: 'JqdarF4197QZ3LCfIOM5eAtt', // process.env.STORYBLOK_API,
         },
+        version: 'published', // Change this to draft if you want to use preview token.
       },
     },
     {
