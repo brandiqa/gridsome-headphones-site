@@ -10,6 +10,7 @@ import PageContent from '~/components/PageContent.vue'
 import Hero from '~/components/Hero.vue'
 import Product from '~/components/Product.vue'
 import ProductList from '~/components/ProductList.vue'
+import ContactForm from '~/components/ContactForm.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // register dependencies
@@ -24,6 +25,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Hero', Hero)
   Vue.component('ProductList', ProductList)
   Vue.component('Product', Product)
+  Vue.component('ContactForm', ContactForm)
 
   // register filters
   Vue.filter('resize', (image, option) => {
